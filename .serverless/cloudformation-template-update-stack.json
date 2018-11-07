@@ -114,6 +114,19 @@
                       "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/notes-app-api-prod-delete:*:*"
                     }
                   ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "dynamodb:DescribeTable",
+                    "dynamodb:Query",
+                    "dynamodb:Scan",
+                    "dynamodb:GetItem",
+                    "dynamodb:PutItem",
+                    "dynamodb:UpdateItem",
+                    "dynamodb:DeleteItem"
+                  ],
+                  "Resource": "arn:aws:dynamodb:us-east-1:*:*"
                 }
               ]
             }
@@ -140,7 +153,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/notes-app-api/prod/1541365656161-2018-11-04T21:07:36.161Z/notes-app-api.zip"
+          "S3Key": "serverless/notes-app-api/prod/1541456780453-2018-11-05T22:26:20.453Z/notes-app-api.zip"
         },
         "FunctionName": "notes-app-api-prod-create",
         "Handler": "create.main",
@@ -176,7 +189,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/notes-app-api/prod/1541365656161-2018-11-04T21:07:36.161Z/notes-app-api.zip"
+          "S3Key": "serverless/notes-app-api/prod/1541456780453-2018-11-05T22:26:20.453Z/notes-app-api.zip"
         },
         "FunctionName": "notes-app-api-prod-get",
         "Handler": "get.main",
@@ -212,7 +225,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/notes-app-api/prod/1541365656161-2018-11-04T21:07:36.161Z/notes-app-api.zip"
+          "S3Key": "serverless/notes-app-api/prod/1541456780453-2018-11-05T22:26:20.453Z/notes-app-api.zip"
         },
         "FunctionName": "notes-app-api-prod-list",
         "Handler": "list.main",
@@ -248,7 +261,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/notes-app-api/prod/1541365656161-2018-11-04T21:07:36.161Z/notes-app-api.zip"
+          "S3Key": "serverless/notes-app-api/prod/1541456780453-2018-11-05T22:26:20.453Z/notes-app-api.zip"
         },
         "FunctionName": "notes-app-api-prod-update",
         "Handler": "update.main",
@@ -284,7 +297,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/notes-app-api/prod/1541365656161-2018-11-04T21:07:36.161Z/notes-app-api.zip"
+          "S3Key": "serverless/notes-app-api/prod/1541456780453-2018-11-05T22:26:20.453Z/notes-app-api.zip"
         },
         "FunctionName": "notes-app-api-prod-delete",
         "Handler": "delete.main",
@@ -660,7 +673,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1541365656229": {
+    "ApiGatewayDeployment1541456780522": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
